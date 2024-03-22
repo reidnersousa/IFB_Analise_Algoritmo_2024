@@ -75,7 +75,7 @@ class Manager:
   def get_time(self,entrada,metodo_busca):
     lista_tempo =[]
 
-    for i in range(self.QTD_REPETICAO_FOR):
+    for _ in range(self.QTD_REPETICAO_FOR):
 
 
 
