@@ -108,7 +108,7 @@ class Manager:
     if alvo is None:
       alvo = np.random.randint(1,len(vetor)+1)
 
-    for i ,valor in enumerate(vetor):
+    for _ ,valor in enumerate(vetor):
 
       if valor == alvo:
         encontrou = True
