@@ -190,5 +190,15 @@ class Manager:
     plt.savefig(f'grafido_quando_q={self.nome}.png')
 
 
-#teste = Manager(10**4,10**5,10**6,10**7,2,'q = teste')
-#teste.gerando_grafico()
+q_10_2 = Manager(10**4,10**5,10**6,10**7,10**2,'q = 10²')
+q_10_2.gerando_grafico()
+
+q_10_3 = Manager(10**4,10**5,10**6,10**7,10**3,'q_10³')
+q_10_3.gerando_grafico()
+
+q_10_4 = Manager(10**4,10**5,10**6,10**7,10**4,'q = 10⁴')
+q_10_4.gerando_grafico()
+
+
+q_10_5 = Manager(10**4,10**5,10**6,10**7,10**5,'q = 10⁵')
+q_10_5.gerando_grafico()
