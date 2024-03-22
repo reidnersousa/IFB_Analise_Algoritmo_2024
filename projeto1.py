@@ -122,12 +122,12 @@ class Manager:
     if alvo is None:
       alvo = np.random.randint(1,len(vetor)+1)
 
-    for i in range(len(vetor)):
+    for _,valor in enumerate(vetor):
 
-      if alvo < vetor[i]:
+      if alvo < valor:
         encontrou = False
         break
-      elif alvo ==vetor[i]:
+      elif alvo ==valor:
 
         encontrou = True
         break
