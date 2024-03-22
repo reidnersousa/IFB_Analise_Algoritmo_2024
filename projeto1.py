@@ -72,20 +72,20 @@ class Manager:
 
 
 
-  def get_time(self,input,metodo_busca):
+  def get_time(self,entrada,metodo_busca):
     lista_tempo =[]
 
     for i in range(self.QTD_REPETICAO_FOR):
 
 
 
-      if input == 10000:
+      if entrada == 10000:
         amostra = self.amostra_10_4
-      elif input == 100000:
+      elif entrada == 100000:
         amostra = self.amostra_10_5
-      elif input == 1000000:
+      elif entrada == 1000000:
         amostra = self.amostra_10_6
-      elif input == 10000000:
+      elif entrada == 10000000:
         amostra = self.amostra_10_7
 
 
