@@ -55,9 +55,72 @@ function gerandoAmostra(N) {
         //lista.push(corte_ultimo);
         //console.log(">>",corte_ultimo)
       }
+     
   
       return lista;
     }
+
+
+    etapa2() {
+        const lista_maiores = [];
+        for (const i of this.array_de_array) {
+          if (i.length > 0) {
+            // Utilize o bubble sort aqui
+            this.bubbleSort(i);
+    
+            const maior_elemento = i[i.length - 1];
+            lista_maiores.push(maior_elemento);
+          }
+        }
+        this.lista_maiores = lista_maiores;
+      }
+
+      etapa3() {
+       
+        
+        const maior_numero = Math.max(...this.lista_maiores);
+        
+        for (let i = 0; i < this.array_de_array.length; i++) {
+          const sub_array = this.array_de_array[i];
+          for (let j = 0; j < sub_array.length; j++) {
+            const numero = sub_array[j];
+            if (numero === maior_numero) {
+            
+              const index_a_remover = sub_array.indexOf(maior_numero);
+              
+              this.array_de_array[i].splice(index_a_remover, 1);
+              
+              break;
+            }
+          }
+        }
+        
+        this.vetor_solucao.push(Math.max(...this.lista_maiores));
+        
+    }
+
+    etapa4() {
+        console.log("entrei aqui");
+        console.log(this.vetor);
+        console.log(this.N);
+        this.array_de_array = this.etapa1();
+      
+        let is_array_cheia = true;
+      
+        while (is_array_cheia) {
+          if (!this.array_de_array  || !this.array_de_array.length) {
+            is_array_cheia = false;
+          } else {
+            this.etapa2();
+            this.etapa3();
+            this.array_de_array = this.array_de_array.filter(sub_array => sub_array.length > 0);
+          }
+        }
+      
+        //console.log(this.array_de_array, ">>", this.vetor_solucao);
+      }
+      
+
   }
 
   
