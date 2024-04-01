@@ -24,6 +24,20 @@ function gerandoAmostra(N) {
         }
       }
     }
+
+    buscaSequencial(array){
+      var maior =0;
+      console.log(array)
+      for(let i = 0 ; i < array.length;i++){
+        if(array[i]>maior){
+          maior= array[i]
+        }
+
+        
+      }
+      return maior
+
+    }
   
     etapa1() {
       const qtd_partes = Math.sqrt(this.N);
@@ -51,9 +65,7 @@ function gerandoAmostra(N) {
           lista.push(corte);
         }
   
-        //const corte_ultimo = this.vetor.slice(qtd_partes * j);
-        //lista.push(corte_ultimo);
-        //console.log(">>",corte_ultimo)
+       
       }
      
   
@@ -66,9 +78,12 @@ function gerandoAmostra(N) {
         for (const i of this.array_de_array) {
           if (i.length > 0) {
             // Utilize o bubble sort aqui
-            this.bubbleSort(i);
-    
-            const maior_elemento = i[i.length - 1];
+            const maior_elemento=this.buscaSequencial(i);
+            //this.bubbleSort(i);
+
+            //const maior_elemento = i[i.length - 1];
+            
+            
             lista_maiores.push(maior_elemento);
           }
         }
@@ -100,9 +115,7 @@ function gerandoAmostra(N) {
     }
 
     etapa4() {
-        console.log("entrei aqui");
-        console.log(this.vetor);
-        console.log(this.N);
+        
         this.array_de_array = this.etapa1();
       
         let is_array_cheia = true;
