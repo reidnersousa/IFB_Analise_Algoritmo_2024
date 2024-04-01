@@ -7,8 +7,10 @@ function gerandoAmostra(N) {
   }
   
   class OrdenacaoRaizQuadrada {
-    constructor(vetor) {
+    constructor(vetor,metodoOrdencao) {
+
       this.vetor = vetor;
+      this.metodoOrdencao = metodoOrdencao
       this.N = vetor.length;
       this.vetor_solucao = [];
     }
@@ -27,7 +29,7 @@ function gerandoAmostra(N) {
 
     buscaSequencial(array){
       var maior =0;
-      console.log(array)
+    
       for(let i = 0 ; i < array.length;i++){
         if(array[i]>maior){
           maior= array[i]
@@ -54,7 +56,7 @@ function gerandoAmostra(N) {
         }   
       } else {
         const chao_sqrt_n = Math.floor(qtd_partes);
-        const ultima_parte_tamanho = this.N % chao_sqrt_n;
+       
         
         var j = 0;
         for (let i = 0; i < qtd_partes; i++) {
@@ -77,14 +79,19 @@ function gerandoAmostra(N) {
         const lista_maiores = [];
         for (const i of this.array_de_array) {
           if (i.length > 0) {
-            // Utilize o bubble sort aqui
-            const maior_elemento=this.buscaSequencial(i);
-            //this.bubbleSort(i);
+            if (this.metodoOrdencao=='Heap'){
+              console.log("Implementar a Heap")
 
-            //const maior_elemento = i[i.length - 1];
+            }
+            else if(this.metodoOrdencao=='Quadrático'){
+              const maior_elemento=this.buscaSequencial(i);
+              lista_maiores.push(maior_elemento);
+        
+            }
             
             
-            lista_maiores.push(maior_elemento);
+            
+            
           }
         }
         this.lista_maiores = lista_maiores;

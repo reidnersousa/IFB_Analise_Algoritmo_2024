@@ -1,25 +1,24 @@
 
 
 const {OrdenacaoRaizQuadrada,gerandoAmostra} = require('./OrdenacaoRaizQuadrada')
-vetor = gerandoAmostra(10*1)
-/// 10**5 Portanto, 257.085 segundos correspondem a cerca de 4,28 minutos. 😊
+const {tempoExecucao} = require('./TempoExecucao')
+let somaTempos = 0 
+const QTD_REPETICOES = 10;
+for (i=0;i<QTD_REPETICOES;i++){
+    
+    vetor_10_4 = gerandoAmostra(10**6);
+    const teste= new OrdenacaoRaizQuadrada(vetor_10_4,'Quadrático');
+    //console.log(teste.vetor)
 
-//vetor =[ 3,4,7,4,10,6,4,8,4,1]
-const teste = new OrdenacaoRaizQuadrada(vetor);
-/*
-teste.etapa1()
-console.log(teste.array_de_array)
-teste.etapa2()
-teste.etapa3()
-console.log(">>",teste.lista_maiores)
-console.log(teste.vetor_solucao)
+    const tempoEx= tempoExecucao(() => teste.etapa4())
+    //console.log(tempoEx)
+    console.log(">>",teste.vetor_solucao)
 
-*/
-console.log(teste.vetor)
-teste.etapa4()
-console.log(">>",teste.vetor_solucao)
-
-//vetor =[ 3,4,7,4,10,6,4,8,4,1]
+    somaTempos += tempoEx
 
 
-//teste.buscaSequencial(vetor)
+}
+
+var media = somaTempos/QTD_REPETICOES
+console.log("media",media)
+
