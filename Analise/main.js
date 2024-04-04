@@ -17,9 +17,7 @@ for (i=0;i<QTD_REPETICOES;i++){
     
     console.log('\n\n')
     
-    const teste2 = new OrdenacaoRaizQuadrada(vetor_10_4,'Heap')
-    const tempoEx2= tempoExecucao(() => teste2.etapa4())
-    console.log("Teste2",teste2.vetor_solucao)
+
    
    
     

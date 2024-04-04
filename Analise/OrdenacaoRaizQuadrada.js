@@ -82,34 +82,16 @@ function gerandoAmostra(N) {
         const lista_maiores = [];
         const heap = new Heap()
         
-        const maiores_particoes = []
-        for (const i of this.array_de_array) {
-        
-          if (i.length > 0) {
-            if (this.metodoOrdencao=='Heap'){
-              
-              const maioresNumeros = heap.get_maiores_elementos(i.slice())
-              const maior_elemento=heap.remover_heap(i)
-             
-              
-              lista_maiores.push(maior_elemento)
-             
-              
-            }
-            else if(this.metodoOrdencao=='Quadrático'){
-              
+        if(this.metodoOrdencao == 'Quadrático'){    
+          for (const i of this.array_de_array) {
+            if (i.length > 0) {
               const maior_elemento=this.buscaSequencial(i)
-
-              
               lista_maiores.push(maior_elemento)
-              
-             
             }
-            
-            
-            
-            
           }
+        }
+        else if(this.metodoOrdencao == 'Heap'){
+          console.log("Tem que arrumar isso aqui ")
         }
         this.lista_maiores = lista_maiores;
       }
