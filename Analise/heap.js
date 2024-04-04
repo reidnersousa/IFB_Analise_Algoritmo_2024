@@ -42,38 +42,44 @@ class Heap {
 
 }
 
-var teste = [ [ 9, 4, 6 ], [ 2, 6, 6 ], [ 2, 2, 6 ] ];
-vetor_solucao = [ ]
-maior_elementos = []
-const objeto_heap = new Heap();
-for(const j of teste){
-  console.log("j",j)
-  objeto_heap.sort_heap(j)
-  maior_elementos.push(j[j.length-1])
 
-}
+function encontrar_maiores_elemenentos(teste,vetor_solucao,objeto_heap){
 
-objeto_heap.sort_heap(maior_elementos)
-maior_de_todo = maior_elementos[maior_elementos.length-1]
-vetor_solucao.push(maior_de_todo)
 
-console.log("Teste ordenado:", teste , maior_elementos , vetor_solucao);
-teste = teste.map(subarray => subarray.filter(numero=> numero !== maior_de_todo ))
 
-console.log("teste",teste)
-/// Segunda parte 
-maior_elementos = []
-for(const j of teste){
-  console.log("j",j)
-  objeto_heap.sort_heap(j)
-  maior_elementos.push(j[j.length-1])
 
-}
-objeto_heap.sort_heap(maior_elementos)
-maior_de_todo = maior_elementos[maior_elementos.length-1]
-vetor_solucao.push(maior_de_todo)
+      while (teste.length > 0) {
+          var maior_elemento_subarray = [];
 
-console.log("Teste ordenado:", teste , maior_elementos , vetor_solucao);
-teste = teste.map(subarray => subarray.filter(numero=> numero !== maior_de_todo ))
-console.log("testw2",teste)
+          
+          for (const subarray of teste) {
+              
+              objeto_heap.sort_heap(subarray);
+              
+              maior_elemento_subarray.push(subarray[subarray.length - 1]);
+          }
+
+         
+          objeto_heap.sort_heap(maior_elemento_subarray);
+         
+          var maior_de_todo = maior_elemento_subarray[maior_elemento_subarray.length - 1];
+          
+          vetor_solucao.push(maior_de_todo);
+
+        
+          teste = teste.map(subarray =>{
+            var filtered = subarray.filter(numero => numero !== maior_de_todo);
+            return filtered.length > 0 ? filtered : null;
+          }).filter(Boolean);
+          
+      }
+    }
+
+var teste = [[9, 4, 6], [2, 6, 6], [2, 2, 6]];
+var vetor_solucao = [];
+var objeto_heap = new Heap();
+encontrar_maiores_elemenentos(teste,vetor_solucao,objeto_heap)
+console.log("Vetor solução:", vetor_solucao);
+console.log("Teste final:", teste);
+
 module.exports={Heap}
