@@ -1,3 +1,6 @@
+const {Heap} = require('./heap') 
+
+
 function gerandoAmostra(N) {
     const sequencia = [];
     for (let i = 0; i < N; i++) {
@@ -77,16 +80,30 @@ function gerandoAmostra(N) {
 
     etapa2() {
         const lista_maiores = [];
+        const heap = new Heap()
+        
+        const maiores_particoes = []
         for (const i of this.array_de_array) {
+        
           if (i.length > 0) {
             if (this.metodoOrdencao=='Heap'){
-              console.log("Implementar a Heap")
-
+              
+              const maioresNumeros = heap.get_maiores_elementos(i.slice())
+              const maior_elemento=heap.remover_heap(i)
+             
+              
+              lista_maiores.push(maior_elemento)
+             
+              
             }
             else if(this.metodoOrdencao=='Quadrático'){
-              const maior_elemento=this.buscaSequencial(i);
-              lista_maiores.push(maior_elemento);
-        
+              
+              const maior_elemento=this.buscaSequencial(i)
+
+              
+              lista_maiores.push(maior_elemento)
+              
+             
             }
             
             
@@ -124,6 +141,7 @@ function gerandoAmostra(N) {
     etapa4() {
         
         this.array_de_array = this.etapa1();
+        console.log(this.array_de_array)
       
         let is_array_cheia = true;
       
