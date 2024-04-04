@@ -3,10 +3,10 @@
 const {OrdenacaoRaizQuadrada,gerandoAmostra} = require('./OrdenacaoRaizQuadrada')
 const {tempoExecucao} = require('./TempoExecucao')
 let somaTempos = 0 
-const QTD_REPETICOES = 10;
+const QTD_REPETICOES = 1;
 for (i=0;i<QTD_REPETICOES;i++){
     
-    vetor_10_4 = gerandoAmostra(10**6);
+    vetor_10_4 = gerandoAmostra(10**7);
     const teste= new OrdenacaoRaizQuadrada(vetor_10_4,'Quadrático');
     //console.log(teste.vetor)
 
