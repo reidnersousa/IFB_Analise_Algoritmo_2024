@@ -74,12 +74,12 @@ function encontrar_maiores_elemenentos(teste,vetor_solucao,objeto_heap){
           
       }
     }
-
-var teste = [[9, 4, 6], [2, 6, 6], [2, 2, 6]];
+/*
+var teste = [[9, 4, 6], [7,16, 6], [2, 2, 6]];
 var vetor_solucao = [];
 var objeto_heap = new Heap();
 encontrar_maiores_elemenentos(teste,vetor_solucao,objeto_heap)
 console.log("Vetor solução:", vetor_solucao);
 console.log("Teste final:", teste);
-
-module.exports={Heap}
+*/
+module.exports={Heap,encontrar_maiores_elemenentos}

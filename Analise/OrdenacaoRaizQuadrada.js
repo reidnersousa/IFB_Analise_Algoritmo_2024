@@ -1,4 +1,4 @@
-const {Heap} = require('./heap') 
+const {Heap, encontrar_maiores_elemenentos} = require('./heap') 
 
 
 function gerandoAmostra(N) {
@@ -85,13 +85,16 @@ function gerandoAmostra(N) {
         if(this.metodoOrdencao == 'Quadrático'){    
           for (const i of this.array_de_array) {
             if (i.length > 0) {
+              //const maior_elemento=this.bubbleSort(i)
               const maior_elemento=this.buscaSequencial(i)
               lista_maiores.push(maior_elemento)
             }
           }
         }
         else if(this.metodoOrdencao == 'Heap'){
-          console.log("Tem que arrumar isso aqui ")
+          
+          encontrar_maiores_elemenentos(this.array_de_array,lista_maiores,heap)
+          
         }
         this.lista_maiores = lista_maiores;
       }
@@ -123,7 +126,7 @@ function gerandoAmostra(N) {
     etapa4() {
         
         this.array_de_array = this.etapa1();
-        console.log(this.array_de_array)
+        //console.log(this.array_de_array)
       
         let is_array_cheia = true;
       
