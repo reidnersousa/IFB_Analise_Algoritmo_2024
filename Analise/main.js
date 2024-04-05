@@ -1,33 +1,23 @@
 
 
 const {OrdenacaoRaizQuadrada,gerandoAmostra} = require('./OrdenacaoRaizQuadrada')
-const {tempoExecucao} = require('./TempoExecucao')
+const {tempoExecucao , analisador_empirico} = require('./TempoExecucao')
 let somaTempos = 0 
 const QTD_REPETICOES = 1;
 for (i=0;i<QTD_REPETICOES;i++){
+    const resultado =analisador_empirico(10000,'Heap')
     
-    vetor_10_4 = gerandoAmostra(5);
-    console.log("vetor entrada",vetor_10_4)
-    
-    const teste1= new OrdenacaoRaizQuadrada(vetor_10_4,'Quadrático');
-    
-    const tempoEx1= tempoExecucao(() => teste1.etapa4())
-    console.log("Teste1 ",teste1.vetor_solucao)
-    
-    
-    console.log('\n\n')
     
 
    
    
     
 
-    somaTempos += tempoEx1
+    somaTempos += resultado.tempo_execucao
 
 
 }
-
-
 var media = somaTempos/QTD_REPETICOES
+
 console.log("media",media)
 
