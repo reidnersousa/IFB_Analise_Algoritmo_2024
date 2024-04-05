@@ -19,6 +19,7 @@ function gerandoAmostra(N) {
     }
   
     bubbleSort(array) {
+      var maior =0;
       for (let i = array.length - 1; i > 0; i--) {
         for (let j = 0; j < i; j++) {
           if (array[j] > array[j + 1]) {
@@ -28,6 +29,8 @@ function gerandoAmostra(N) {
           }
         }
       }
+      maior = array[array.length-1]
+      return maior
     }
 
     buscaSequencial(array){
@@ -86,6 +89,7 @@ function gerandoAmostra(N) {
           for (const i of this.array_de_array) {
             if (i.length > 0) {
               //const maior_elemento=this.bubbleSort(i)
+              
               const maior_elemento=this.buscaSequencial(i)
               lista_maiores.push(maior_elemento)
             }

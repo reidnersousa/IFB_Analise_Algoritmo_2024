@@ -6,7 +6,7 @@ let somaTempos = 0
 const QTD_REPETICOES = 1;
 for (i=0;i<QTD_REPETICOES;i++){
     
-    vetor_10_4 = gerandoAmostra(100);
+    vetor_10_4 = gerandoAmostra(5);
     console.log("vetor entrada",vetor_10_4)
     
     const teste1= new OrdenacaoRaizQuadrada(vetor_10_4,'Quadrático');
@@ -22,7 +22,7 @@ for (i=0;i<QTD_REPETICOES;i++){
    
     
 
-    //somaTempos += tempoEx
+    somaTempos += tempoEx1
 
 
 }
