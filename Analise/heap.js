@@ -9,11 +9,11 @@ class Heap {
       for (var i = Math.floor(N / 2) - 1; i >= 0; i--) {
           this.heapify(vetor, N, i);
       }
-      for (var i = N - 1; i > 0; i--) {
+      for (var j = N - 1; j > 0; j--) {
           var temp = vetor[0];
-          vetor[0] = vetor[i];
-          vetor[i] = temp;
-          this.heapify(vetor, i, 0);
+          vetor[0] = vetor[j];
+          vetor[j] = temp;
+          this.heapify(vetor, j, 0);
       }
 
       
