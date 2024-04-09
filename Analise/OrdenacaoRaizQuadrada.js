@@ -61,7 +61,7 @@ function gerandoAmostra(N) {
           lista.push(corte);
         }   
       } else {
-        const chao_sqrt_n = Math.floor(qtd_partes);
+        //const chao_sqrt_n = Math.floor(qtd_partes);
        
         
         var j = 0;
