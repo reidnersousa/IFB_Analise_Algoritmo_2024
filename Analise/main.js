@@ -1,14 +1,16 @@
 
 
-const {OrdenacaoRaizQuadrada,gerandoAmostra} = require('./OrdenacaoRaizQuadrada')
-const {tempoExecucao , analisador_empirico} = require('./TempoExecucao')
+//const {OrdenacaoRaizQuadrada,gerandoAmostra} = require('./OrdenacaoRaizQuadrada')
+const {analisador_empirico} = require('./TempoExecucao')
 let somaTempos = 0 
-const QTD_REPETICOES = 1;
-for (i=0;i<QTD_REPETICOES;i++){
-    const resultado =analisador_empirico(10,'Heap')
+const QTD_REPETICOES = 6;
+for (let i=1;i<QTD_REPETICOES;i++){
+    const resultado =analisador_empirico(10**i,'Heap')
+    
+   
+    console.log(resultado.tempo_execucao  ,"valor de i",i )
     
     //const resultado_qud =  analisador_empirico(10,'Quadrático')
-    console.log(resultado.tempo_execucao)
     //console.log(resultado_qud.tempo_execucao)
 
    

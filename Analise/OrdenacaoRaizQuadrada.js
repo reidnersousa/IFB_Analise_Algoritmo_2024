@@ -69,8 +69,9 @@ function gerandoAmostra(N) {
           
           j = j +1;
           const corte = this.vetor.slice(qtd_partes * i, qtd_partes * j);
-         
+          
           lista.push(corte);
+          
         }
   
        
