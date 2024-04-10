@@ -1,4 +1,4 @@
-const {Heap, encontrar_maiores_elemenentos} = require('./heap') 
+const {Heap, encontrar_maiores_elementos} = require('./heap') 
 
 
 function gerandoAmostra(N) {
@@ -61,7 +61,7 @@ function gerandoAmostra(N) {
           lista.push(corte);
         }   
       } else {
-        const chao_sqrt_n = Math.floor(qtd_partes);
+        //const chao_sqrt_n = Math.floor(qtd_partes);
        
         
         var j = 0;
@@ -69,8 +69,9 @@ function gerandoAmostra(N) {
           
           j = j +1;
           const corte = this.vetor.slice(qtd_partes * i, qtd_partes * j);
-         
+          
           lista.push(corte);
+          
         }
   
        
@@ -97,7 +98,7 @@ function gerandoAmostra(N) {
         }
         else if(this.metodoOrdencao == 'Heap'){
           
-          encontrar_maiores_elemenentos(this.array_de_array,lista_maiores,heap)
+          encontrar_maiores_elementos(this.array_de_array,lista_maiores,heap)
           
         }
         this.lista_maiores = lista_maiores;
