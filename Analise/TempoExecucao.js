@@ -16,7 +16,8 @@ function tempoExecucao(funcao){
 
 function analisador_empirico(tamanho_entrada,heap_ou_quadratico){
     const  amostra = gerandoAmostra(tamanho_entrada)
-    const objeto_raiz = new OrdenacaoRaizQuadrada(amostra,heap_ou_quadratico)
+    console.log("amostrar",amostra)
+    const objeto_raiz = new OrdenacaoRaizQuadrada(amostra,heap_ou_quadratico,tamanho_entrada)
     var tempo_execucao =  tempoExecucao(()=>objeto_raiz.etapa4())
     const vetor_solucao = objeto_raiz.vetor_solucao
   

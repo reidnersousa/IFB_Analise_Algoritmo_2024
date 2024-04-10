@@ -10,8 +10,8 @@ function gerandoAmostra(N) {
   }
   
   class OrdenacaoRaizQuadrada {
-    constructor(vetor,metodoOrdencao) {
-
+    constructor(vetor,metodoOrdencao , tam_entrada) {
+      this.tam_entrada = tam_entrada;
       this.vetor = vetor;
       this.metodoOrdencao = metodoOrdencao
       this.N = vetor.length;
@@ -97,8 +97,8 @@ function gerandoAmostra(N) {
           }
         }
         else if(this.metodoOrdencao == 'Heap'){
-          
-          encontrar_maiores_elementos(this.array_de_array,lista_maiores,heap)
+           console.log(this.tam_entrada , this.array_de_array)
+          //encontrar_maiores_elementos(this.array_de_array,lista_maiores,heap,this.tam_entrada)
           
         }
         this.lista_maiores = lista_maiores;

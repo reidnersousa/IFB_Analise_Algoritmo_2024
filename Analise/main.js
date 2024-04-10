@@ -3,9 +3,10 @@
 //const {OrdenacaoRaizQuadrada,gerandoAmostra} = require('./OrdenacaoRaizQuadrada')
 const {analisador_empirico} = require('./TempoExecucao')
 let somaTempos = 0 
-const QTD_REPETICOES = 6;
+const QTD_REPETICOES = 2;
 for (let i=1;i<QTD_REPETICOES;i++){
-    const resultado =analisador_empirico(10**i,'Heap')
+    /// tem que arrumar a classe heap ainda não esta funcionado certo 
+    const resultado =analisador_empirico(10,'Heap')
     
    
     console.log(resultado.tempo_execucao  ,"valor de i",i )
