@@ -1,4 +1,4 @@
-const {Heap, encontrar_maiores_elemenentos} = require('./heap') 
+const {Heap, encontrar_maiores_elementos} = require('./heap') 
 
 
 function gerandoAmostra(N) {
@@ -98,7 +98,7 @@ function gerandoAmostra(N) {
         }
         else if(this.metodoOrdencao == 'Heap'){
           
-          encontrar_maiores_elemenentos(this.array_de_array,lista_maiores,heap)
+          encontrar_maiores_elementos(this.array_de_array,lista_maiores,heap)
           
         }
         this.lista_maiores = lista_maiores;
