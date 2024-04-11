@@ -87,12 +87,22 @@ function encontrar_maiores_elementos(v, tamanho_amostra) {
   return vetor_solucao;
 }
 
-const teste = [[8, 4, 10], [8, 3, 6], [8, 10, 8], [6,2,3],[1,2]];
-const tamanho_amostra = 14;
+
+
+
+
+
+
+/*
+
+const teste = [ [ 1, 4, 2 ], [ 5, 5, 1 ], [ 3, 2, 5 ], [ 2 ] ]
+const tamanho_amostra = 10;
+
+
 
 const vetor_solucao = encontrar_maiores_elementos(teste, tamanho_amostra);
 console.log("Vetor solução:", vetor_solucao);
-
+*/
 
 
 module.exports={Heap,encontrar_maiores_elementos}

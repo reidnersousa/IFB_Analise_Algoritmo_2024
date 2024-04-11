@@ -83,7 +83,7 @@ function gerandoAmostra(N) {
 
 
     etapa2() {
-        const lista_maiores = [];
+        let lista_maiores = [];
         const heap = new Heap()
         
         if(this.metodoOrdencao == 'Quadrático'){    
@@ -95,13 +95,15 @@ function gerandoAmostra(N) {
               lista_maiores.push(maior_elemento)
             }
           }
+
+          this.lista_maiores = lista_maiores;
         }
         else if(this.metodoOrdencao == 'Heap'){
-           console.log(this.tam_entrada , this.array_de_array)
-          //encontrar_maiores_elementos(this.array_de_array,lista_maiores,heap,this.tam_entrada)
+
           
-        }
-        this.lista_maiores = lista_maiores;
+          this.lista_maiores=encontrar_maiores_elementos(this.array_de_array,this.tam_entrada)
+          }
+        //this.lista_maiores = lista_maiores;
       }
 
       etapa3() {
