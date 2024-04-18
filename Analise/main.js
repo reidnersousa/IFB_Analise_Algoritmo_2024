@@ -2,8 +2,9 @@
 
 //const {OrdenacaoRaizQuadrada,gerandoAmostra} = require('./OrdenacaoRaizQuadrada')
 const {analisador_empirico} = require('./TempoExecucao')
-let somaTempos = 0 
-const QTD_REPETICOES = 9;
+let somaTempos = 0
+// 4 ate 8 
+const QTD_REPETICOES = 6;
 for (let i=1;i<QTD_REPETICOES;i++){
     
    

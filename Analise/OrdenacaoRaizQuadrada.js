@@ -89,9 +89,9 @@ function gerandoAmostra(N) {
         if(this.metodoOrdencao == 'Quadrático'){    
           for (const i of this.array_de_array) {
             if (i.length > 0) {
-              const maior_elemento=this.bubbleSort(i)
+              //const maior_elemento=this.bubbleSort(i)
               
-              //const maior_elemento=this.buscaSequencial(i)
+              const maior_elemento=this.buscaSequencial(i)
               lista_maiores.push(maior_elemento)
             }
           }
