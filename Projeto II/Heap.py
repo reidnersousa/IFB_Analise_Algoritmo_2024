@@ -21,12 +21,12 @@ class Heap:
         if len(self.heap) == 0:
             return None
 
-        max_element = self.heap[0]
-        self.heap[0] = self.heap.pop()
-        self.heapify_down(0)
-
-        return max_element
-
+        try :
+            self.heap[0] = self.heap.pop()
+            self.heapify_down(0)
+            return False 
+        except IndexError:
+            return True 
     def heapify_up(self, index):
         index_atual = index
         while index_atual > 0:
@@ -61,54 +61,7 @@ class Heap:
         return self.heap[:]
 
 
-def encontrar_maiores_elementos(v, vetor_solucao):
-    i = 0
-    l = v
-    while len(l) > 0:
-        maior_elemento_sub_vetor = []
 
-        vetor = l
-        l = []
-        print("\n\n")
-        print("vetor", vetor, "i=", i)
-        for sub_vetor in vetor:
-            heap_pri = Heap()
-            heap_pri.make_heap(sub_vetor)
-
-            maior_elemento_sub_vetor.append(heap_pri.get_max())
-
-            heap_pri.remove_max()
-
-            vetor = heap_pri.heap_to_vetor()
-            if len(vetor) == 0:
-                continue
-            else:
-                l.append(vetor)
-            print("l dentro do for ", l)
-
-        heap_seg = Heap()
-        heap_seg.make_heap(maior_elemento_sub_vetor)
-        maior_de_todos = heap_seg.get_max()
-        print("Heap_seg", heap_seg)
-        vetor_solucao.append(maior_de_todos)
-        heap_seg.remove_max()
-        aux_vetor = heap_seg.heap_to_vetor()
-        print(">>aux_vetor", aux_vetor)
-
-        for j in range(len(aux_vetor)):
-            print("aux_vetor", aux_vetor[j], "j", j)
-
-            print("lll", l)
-            l[j].extend([aux_vetor[j]])
-            print("lll", l)
-
-        print("l", l)
-
-        print("vetor_solucao", vetor_solucao)
-
-        i += 1
-        if i == 10:
-            break
 
 
 # teste [16,9,7],[6,6,6],[4,2,1]
