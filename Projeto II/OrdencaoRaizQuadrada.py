@@ -1,6 +1,7 @@
 
 import numpy as np
 import math 
+import funcoes as fc
 class OrdenacaoRaizQuadrada:
   def __init__(self,vetor):
     self.vetor = vetor
@@ -57,7 +58,8 @@ class OrdenacaoRaizQuadrada:
 
     lista_maiores = []
     for i in self.array_de_array:
-      if i.size>0:
+      print(">>>",i)
+      if len(i)>0:
         ### Utilizar o bubble sort aqui
         self.bubbleSort(i)
 
@@ -77,7 +79,7 @@ class OrdenacaoRaizQuadrada:
 
     for i,sub_array in enumerate(self.array_de_array):
       for j,numero in enumerate(sub_array):
-
+        
         if numero == maior_numero:
 
           index_a_remover = np.where(sub_array==maior_numero)[0][0]
@@ -125,8 +127,9 @@ class OrdenacaoRaizQuadrada:
     print(self.array_de_array,">>>",self.vetor_solucao)
 
 
-
-teste = [[9, 4, 6], [7, 16, 6], [2, 1, 6]]
+teste =  fc.gerando_amostra(11)
+print("teste",teste)
+#teste = [[9, 4, 6], [7, 16, 6], [2, 1, 6]]
 
 objt_test = OrdenacaoRaizQuadrada(teste)
 objt_test.etapa_4()
