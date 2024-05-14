@@ -124,3 +124,9 @@ class OrdenacaoRaizQuadrada:
 
     print(self.array_de_array,">>>",self.vetor_solucao)
 
+
+
+teste = [[9, 4, 6], [7, 16, 6], [2, 1, 6]]
+
+objt_test = OrdenacaoRaizQuadrada(teste)
+objt_test.etapa_4()
