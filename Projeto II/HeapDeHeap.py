@@ -3,7 +3,7 @@ from Heap import Heap
 #teste = [[1,12],[10,1],[90]]
 teste = [[9, 4, 6], [7, 16, 6], [2, 1, 6],[1]]
 
-print(len(teste))
+#print(len(teste))
 
 class HeapDeHeap:
     
@@ -35,7 +35,7 @@ class HeapDeHeap:
        
          
         lista_maiores = []
-        print("numero paticoes for ",self.num_paticoes)
+        #print("numero paticoes for ",self.num_paticoes)
         for indice in range (self.num_paticoes):
           
             lista_maiores.append(self.lista_heaps[indice].get_max())  
@@ -57,7 +57,7 @@ class HeapDeHeap:
 
        
         
-
+""" 
 heap_heap =  HeapDeHeap()
 heap_heap.recebe_vetor(teste)
 
@@ -73,6 +73,6 @@ while heap_heap.num_paticoes != 0:
 
 print(heap_heap.lista_ordenada)
 
-
+""" 
 
 

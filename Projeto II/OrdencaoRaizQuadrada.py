@@ -58,7 +58,7 @@ class OrdenacaoRaizQuadrada:
 
     lista_maiores = []
     for i in self.array_de_array:
-      print(">>>",i)
+      #print(">>>",i)
       if len(i)>0:
         ### Utilizar o bubble sort aqui
         self.bubbleSort(i)
@@ -100,9 +100,9 @@ class OrdenacaoRaizQuadrada:
 
 
   def etapa_4(self):
-    print("entrei aqui")
-    print(self.vetor)
-    print(self.N)
+    #print("entrei aqui")
+    #print(self.vetor)
+    #print(self.N)
     self.array_de_array=self.etapa_1()
 
     is_array_cheia = True
@@ -124,7 +124,7 @@ class OrdenacaoRaizQuadrada:
         #print(">>",self.vetor_solucao) ##[9]
         self.array_de_array = list(filter(np.any,self.array_de_array))
 
-    print(self.array_de_array,">>>",self.vetor_solucao)
+    print("amostra",self.array_de_array,"vetor solucao",self.vetor_solucao)
 
 
 teste =  fc.gerando_amostra(11)
@@ -133,3 +133,4 @@ print("teste",teste)
 
 objt_test = OrdenacaoRaizQuadrada(teste)
 objt_test.etapa_4()
+ 
