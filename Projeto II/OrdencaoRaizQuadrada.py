@@ -126,11 +126,11 @@ class OrdenacaoRaizQuadrada:
 
     print("amostra",self.array_de_array,"vetor solucao",self.vetor_solucao)
 
-
+"""
 teste =  fc.gerando_amostra(11)
 print("teste",teste)
 #teste = [[9, 4, 6], [7, 16, 6], [2, 1, 6]]
 
 objt_test = OrdenacaoRaizQuadrada(teste)
 objt_test.etapa_4()
- 
+ """ 

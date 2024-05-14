@@ -4,7 +4,6 @@ import random
 from HeapDeHeap import HeapDeHeap
 
 
-teste = [[9, 4, 6], [7, 16, 6], [2, 1, 6],[1]]
 
 
 def metodo_heap(entrada):
@@ -21,7 +20,7 @@ def metodo_heap(entrada):
   return heap_heap.lista_ordenada
  # print(heap_heap.lista_ordenada)
 
-print(metodo_heap(teste))    
+
    
 
 
@@ -32,3 +31,10 @@ def gerando_amostra(N):
 
 def eh_multiplo(N,qtd_partes):
   return N % qtd_partes ==0
+
+
+### teste = [[9, 4, 6], [7, 16, 6], [2, 1, 6],[1]]  ## A metodo_heap espera os dados assim
+
+#teste = gerando_amostra(100)
+#print(teste)
+#print(metodo_heap(teste))    
