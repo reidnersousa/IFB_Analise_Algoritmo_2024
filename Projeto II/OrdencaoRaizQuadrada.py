@@ -11,12 +11,16 @@ class OrdenacaoRaizQuadrada:
   def bubbleSort(self,array):
     for i in range(len(array)-1,0,-1):
       #print(i)
+      swapped =  False
       for j in range(i):
         #print(">>",i)
         if array[j]>array[j+1]:
           temp = array[j]
           array[j] = array[j+1]
           array[j+1] = temp
+          swapped = True
+      if not swapped:
+        break
 
   def etapa_1(self):
     qtd_partes = np.sqrt(self.N)
@@ -55,19 +59,21 @@ class OrdenacaoRaizQuadrada:
     return lista
     ## 2. Encontre o maior elemento ei de cada parte Vi , com 1 ≤ i ≤ k.
   def etapa_2(self):
-
+    #print("começou uma nova iteração \n ")
     lista_maiores = []
     for i in self.array_de_array:
       #print(">>>",i)
       if len(i)>0:
         ### Utilizar o bubble sort aqui
+        #print("antes de orderna pedaço vetor",i,self.array_de_array)
         self.bubbleSort(i)
-
+        #print("depois de ordenar pedaço vetor",i,self.array_de_array)
         maior_elemento=i[-1]
+        #print("maior_elemento",maior_elemento)
         lista_maiores.append(maior_elemento)
-      else :
-        pass
-    lista_maiores = np.array(lista_maiores)
+    #  else :
+     #   pass
+    #lista_maiores = np.array(lista_maiores)
     self.lista_maiores= lista_maiores
 
   ### Ajusta etapa 3
@@ -124,7 +130,7 @@ class OrdenacaoRaizQuadrada:
         #print(">>",self.vetor_solucao) ##[9]
         self.array_de_array = list(filter(np.any,self.array_de_array))
 
-    print("amostra",self.array_de_array,"vetor solucao",self.vetor_solucao)
+    #print("amostra",self.array_de_array,"vetor solucao",self.vetor_solucao)
 
 """
 teste =  fc.gerando_amostra(11)

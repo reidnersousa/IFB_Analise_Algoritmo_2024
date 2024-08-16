@@ -12,5 +12,8 @@ def main():
     #print()
     #print(fc.metodo_heap(array_de_array))
 
-tempo_exc= timeit.timeit(main,number=1)
-print(tempo_exc)
+qtd_rep = 50
+tempo_exc= timeit.timeit(main,number=qtd_rep)
+
+media = tempo_exc/qtd_rep
+print(media , "N",N)
